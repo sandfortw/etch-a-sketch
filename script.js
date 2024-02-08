@@ -1,5 +1,4 @@
-const num = 16;
-
+let num = 16;
 
 function createRow(num){
   const row = document.createElement('div')
@@ -26,5 +25,13 @@ function createGrid(num){
 }
 
 // Code to Execute:
-
 createGrid(num)
+
+const button = document.querySelector('#user-prompt-button')
+
+button.addEventListener('click', () => {
+  const num = prompt("How wide (and tall) do you want your grid?");
+  const grid = document.querySelector('#grid');
+  grid.innerHTML = '';
+  createGrid(num)
+})
