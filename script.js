@@ -4,7 +4,6 @@ function createRow(num){
   const row = document.createElement('div')
   row.setAttribute('class', 'row')
   for (let i = 0; i < num; i++){
-    console.log("hello")
     createSquare(row)
   }
   return row;
@@ -36,7 +35,9 @@ button.addEventListener('click', () => {
     alert('Input is not a number.')
   } else if (parseInt(num) > 100){
     alert('Input is too high.')
-  } else{
+  } else if (num == null) {
+    void(0)
+  } else {
     grid.innerHTML = '';
     createGrid(num)
   }
