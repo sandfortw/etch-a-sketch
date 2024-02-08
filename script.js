@@ -30,8 +30,14 @@ createGrid(num)
 const button = document.querySelector('#user-prompt-button')
 
 button.addEventListener('click', () => {
-  const num = prompt("How wide (and tall) do you want your grid?");
+  let num = prompt("How wide (and tall) do you want your grid? (Must be less than 100)");
   const grid = document.querySelector('#grid');
-  grid.innerHTML = '';
-  createGrid(num)
+  if (isNaN(num)){
+    alert('Input is not a number.')
+  } else if (parseInt(num) > 100){
+    alert('Input is too high.')
+  } else{
+    grid.innerHTML = '';
+    createGrid(num)
+  }
 })
