@@ -23,33 +23,7 @@ function createGrid(num){
     row = createRow(num);
     grid.appendChild(row)
   }
-  addHoverStyles()
 }
-
-// function addHoverStyles(){
-//   let squares = document.querySelectorAll('.square')
-
-//   function hoverColor(square){
-//     square.style.backgroundColor = 'red';
-//   }
-
-//   function mouseoutColor(square){
-//     square.style.backgroundColor = 'white';
-//     square.style.transition = ''
-//   }
-  
-//   squares.forEach((square) => {
-//     square.addEventListener('mouseover', () => {
-//       hoverColor(square)
-//     })
-//   })
-
-//   squares.forEach((square) => {
-//     square.addEventListener('mouseout', () => {
-//       mouseoutColor(square)
-//     })
-//   })
-// }
 
 // Code to Execute:
 
