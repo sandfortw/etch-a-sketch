@@ -12,8 +12,6 @@ function createRow(num){
 }
 
 function createSquare(row){
-  console.log("hello")
-  console.log(this)
   const square = document.createElement('div')
   square.setAttribute('class', 'square')
   row.appendChild(square)
@@ -28,19 +26,30 @@ function createGrid(num){
   addHoverStyles()
 }
 
-function addHoverStyles(){
-  let squares = document.querySelectorAll('.square')
+// function addHoverStyles(){
+//   let squares = document.querySelectorAll('.square')
 
-  function hoverColor(square){
-    square.style.backgroundColor = 'red';
-  }
+//   function hoverColor(square){
+//     square.style.backgroundColor = 'red';
+//   }
+
+//   function mouseoutColor(square){
+//     square.style.backgroundColor = 'white';
+//     square.style.transition = ''
+//   }
   
-  squares.forEach((square) => {
-    square.addEventListener('mouseover', () => {
-      hoverColor(square)
-    })
-  })
-}
+//   squares.forEach((square) => {
+//     square.addEventListener('mouseover', () => {
+//       hoverColor(square)
+//     })
+//   })
+
+//   squares.forEach((square) => {
+//     square.addEventListener('mouseout', () => {
+//       mouseoutColor(square)
+//     })
+//   })
+// }
 
 // Code to Execute:
 
